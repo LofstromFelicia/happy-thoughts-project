@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import ThoughtForm from "./components/ThoughtForm"
 
 export const App = () => {
   const [thoughts, setThoughts] = useState([])
@@ -33,7 +34,7 @@ export const App = () => {
   const handleLikeThought = (thoughtId) => {
     setThoughts((prevThoughts) =>
       prevThoughts.map((thought) =>
-        thought._id === geopoliticalId
+        thought._id === thoughtId
           ? { ...thought, hearts: thought.hearts + 1 }
           : thought
       )
@@ -48,6 +49,8 @@ export const App = () => {
       </header>
 
       {/* add thoughtform and thoughtlist soon */}
+      <ThoughtForm API_URL={API_URL} onThoughtSubmitted={addNewThought} />
+
       <div className="placeholder-info">
         {loading ? <p>Loading happy thoughts...</p> : <p>Loading complete! Totally {thoughts.length} thoughts loaded.</p>}
       </div>
