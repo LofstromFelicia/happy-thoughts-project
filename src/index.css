@@ -1,11 +1,13 @@
 :root {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --bg-color: #f2edf3;
+  --card-bg: #ffffff;
+  --accent-pink: #ffb3c1;
+  --accent-pink-hover: #ffa2b4;
+  --text-main: #222222;
+  --text-muted: #919191;
 }
+
+body {}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
