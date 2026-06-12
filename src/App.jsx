@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import "./App.css"
 
 export const App = () => {
   const [thoughts, setThoughts] = useState([])
