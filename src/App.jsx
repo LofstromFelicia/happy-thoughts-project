@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import ThoughtForm from "./components/ThoughtForm"
+import ThoughtList from "./components/ThoughtList"
 
 export const App = () => {
   const [thoughts, setThoughts] = useState([])
@@ -48,12 +49,18 @@ export const App = () => {
         <p>Spread some positivity into the ether.</p>
       </header>
 
-      {/* add thoughtform and thoughtlist soon */}
       <ThoughtForm API_URL={API_URL} onThoughtSubmitted={addNewThought} />
 
-      <div className="placeholder-info">
-        {loading ? <p>Loading happy thoughts...</p> : <p>Loading complete! Totally {thoughts.length} thoughts loaded.</p>}
-      </div>
+      {/* Show spinner when loading */}
+      {loading ? (
+        <div className="loading-spinner">Loading happy thoughts...</div>
+      ) : (
+        <ThoughtList
+          thoughts={thoughts}
+          API_URL={API_URL}
+          onLike={handleLikeThought}
+        />
+      )}
     </div>
   )
 }
