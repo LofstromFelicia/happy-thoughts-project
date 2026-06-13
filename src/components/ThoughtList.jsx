@@ -4,14 +4,15 @@ import { enUS } from "date-fns/locale"
 const ThoughtList = ({ thoughts, API_URL, onLike }) => {
 
   const handleLikeClick = async (thoughtId) => {
+    onLike(thoughtId)
+
     try {
       const response = await fetch(`${API_URL}/${thoughtId}/like`, {
         method: "POST",
         headers: { "Content-Type": "application/json" }
       })
 
-      if (response.ok) {
-        onLike(thoughtId)
+      if (!response.ok) {
       }
     } catch (error) {
       console.error("Could not like thought:", error)
