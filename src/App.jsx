@@ -45,7 +45,7 @@ export const App = () => {
   return (
     <div className="main-container">
       <header>
-        <h1>🌿 Happy Thoughts</h1>
+        <h1>Happy Thoughts</h1>
         <p>Spread some positivity into the ether.</p>
       </header>
 
