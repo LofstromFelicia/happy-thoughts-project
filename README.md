@@ -3,7 +3,7 @@
 A responsive React web application built as part of the Technigo Web Development Bootcamp (2026). The app connects to a shared API, allowing users to view the 20 most recent "happy thoughts", post their own positive messages, and interact by liking other users' thoughts in real-time.
 
 ## 🚀 Live Demo
-[👉 Click here to view the live project on Cloudflare Pages](HÄR_KLISTRAR_DU_IN_DIN_CLOUDFLARE_LÄNK)
+[👉 Click here to view the live project on Cloudflare Pages](https://happy-thoughts-project.pages.dev) 
 
 ---
 
