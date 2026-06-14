@@ -45,7 +45,7 @@ export const App = () => {
   return (
     <div className="main-container">
       <header>
-        <h1>Happy Thoughts</h1>
+        <h1>Happy <span className="header-heart">❤️</span>Thoughts</h1>
         <p>Spread some positivity into the ether.</p>
       </header>
 
@@ -61,6 +61,12 @@ export const App = () => {
           onLike={handleLikeThought}
         />
       )}
+
+      {/* FOOTER */}
+      <footer className="app-footer">
+        <p>Created by Felicia Löfström</p>
+        <p className="footer-credits">Technigo Web Development Bootcamp 2026</p>
+      </footer>
     </div>
   )
 }

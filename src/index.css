@@ -29,21 +29,45 @@ body {
 
 header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   margin-top: 20px;
 }
 
 header h1 {
+  font-size: 2.6rem;
+  color: #d47a8c;
+  margin-bottom: 8px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+header h1 .header-heart {
+  display: inline-block;
+  animation: heartbeat 1.2s infinite ease-in-out;
   font-size: 2.2rem;
-  color: #333;
-  margin-bottom: 5px;
-  font-weight: 700;
+}
+
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 header p {
   color: var(--text-muted);
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 .thought-form,
@@ -89,7 +113,7 @@ textarea:focus {
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
-  gap: 15px; 
+  gap: 15px;
 }
 
 button[type="submit"] {
@@ -192,21 +216,20 @@ button[type="submit"]:active {
   font-size: 1.1rem;
 }
 
-@media (max-width: 480px) {
-  .main-container {
-    padding: 10px;
-  }
+.app-footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+  color: #333333;
+  font-weight: 500;
+  font-size: 1rem;
+}
 
-  .thought-form,
-  .thought-card {
-    padding: 20px;
-  }
-
-  .form-footer {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center; 
-  }
+.footer-credits {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 5px;
+  font-weight: 400;
 }
 
 @keyframes pulse {
@@ -230,4 +253,21 @@ button[type="submit"]:active {
   font-size: 1.2rem;
   font-weight: 500;
   animation: pulse 1.5s infinite ease-in-out;
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  .thought-form,
+  .thought-card {
+    padding: 20px;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
 }
