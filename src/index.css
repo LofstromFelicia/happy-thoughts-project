@@ -79,6 +79,7 @@ header p {
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
   width: 100%;
+  border: 6px solid rgba(255, 179, 193, 0.4);
 }
 
 .thought-form h3 {
@@ -194,7 +195,7 @@ button[type="submit"]:active {
 }
 
 .heart-button.has-hearts {
-  background-color: var(--accent-pink);
+  background-color: var(--accent-pink) !important;
 }
 
 .like-count {
